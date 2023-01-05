@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"database/sql"
@@ -7,7 +7,7 @@ import (
 	_ "github.com/lib/pq"
 )
 
-func dbConn() {
+func ConnectDB() {
 	// Connect to the database
 	db, err := sql.Open("postgres", "user=postgres password=mypassword dbname=mydatabase sslmode=disable")
 	if err != nil {
