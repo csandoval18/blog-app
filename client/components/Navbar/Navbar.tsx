@@ -5,10 +5,10 @@ interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
 	return (
-		<nav className='flex justify-between align-middle px-60 backdrop-blur-mm bg-gray-900 bg-opacity-90 py-4 ='>
+		<nav className='navbar'>
 			<div className='bg-wrapper'>
 				<Image
-					className='invert'
+					className='logo'
 					src='/next.svg'
 					alt='Next.js Logo'
 					width={180}
@@ -16,24 +16,15 @@ const Navbar: React.FC<NavbarProps> = () => {
 					priority
 				/>
 			</div>
-			<ul className='nav-menu flex gap-2 text-lg'>
+			<ul className='nav-menu'>
 				<li>
 					<a href=''>Articles</a>
 				</li>
 				<li>
-					<a href=''></a>
-				</li>
-				<li>
-					<a href=''></a>
-				</li>
-				<li>
-					<a href=''></a>
-				</li>
-				<li>
-					<a href=''></a>
-				</li>
-				<li>
 					<a href=''>About</a>
+				</li>
+				<li>
+					<a href=''>Contact</a>
 				</li>
 			</ul>
 		</nav>
