@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
-import useGetScrollYDirection from "../../utils/useGetScrollYDirection"
+import useGetScrollYDirection from "../utils/useGetScrollYDirection"
 import {
 	Nav,
 	Sidebar,
-} from "../../styles/components/Navbar.styled"
-import { NavButton } from "../../styles/Global.styled"
+} from "../styles/components/Navbar.styled"
+import { NavButton } from "../styles/Global.styled"
 
 interface NavbarProps {}
 

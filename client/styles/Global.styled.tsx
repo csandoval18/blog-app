@@ -3,7 +3,7 @@ import styled, {
 } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;500;700;900&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;500;700;900&display=swap'); */
   body {
     margin: 0;
     padding: 0;
@@ -16,7 +16,6 @@ export const Theme = styled.div`
 	width: 100%;
 	* {
 		color: ${(props) => props.theme.colors.text};
-		font-family: "OrkneyTypeface";
 		margin: 0;
 	}
 	p,
@@ -29,8 +28,6 @@ export const Theme = styled.div`
 	h1 {
 		color: #59ffcd;
 		font-size: 6em;
-		font-family: "BreakFont";
-		/* font-family: "FivoSans"; */
 		letter-spacing: 0.3rem;
 		margin: 0;
 	}
@@ -103,6 +100,6 @@ export const Card = styled.div`
 	h4,
 	h5,
 	h6 {
-		/* font-family: "BreakFont"; */
+		font-family: "Courier New", Courier, monospace;
 	}
 `

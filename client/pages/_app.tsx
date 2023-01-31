@@ -1,6 +1,5 @@
 import type { AppProps } from "next/app"
 import { ThemeProvider } from "styled-components"
-import Navbar from "../components/Navbar/Navbar"
 import {
 	GlobalStyle,
 	Theme,
