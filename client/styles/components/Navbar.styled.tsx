@@ -26,26 +26,15 @@ export const Nav = styled.nav`
 			z-index: 2;
 		}
 	}
-	/* a {
-		border: 2px solid rgb(255, 255, 255, 0);
-		border-radius: 12px;
-		color: ${(props) => props.theme.colors.text};
-		display: block;
-		padding: 8px 15px;
-		text-decoration: none;
-		transition: border 0.5s ease-out;
-		&:hover {
-			border: 2px solid rgb(255, 255, 255, 0.4);
-		}
-	} */
 	a {
-		color: ${(props) => props.theme.colors.text};
+		color: ${(p) => p.theme.colors.text};
 		display: block;
 		padding: 8px 15px;
 		text-align: center;
 		text-decoration: none;
 		&::after {
-			background-color: white;
+			background-color: ${(p) =>
+				p.theme.colors.text};
 			content: "";
 			display: block;
 			transition: width 0.25s ease-out;
@@ -56,7 +45,8 @@ export const Nav = styled.nav`
 			&::after {
 				content: "";
 				display: block;
-				background-color: white;
+				background-color: ${(p) =>
+					p.theme.colors.text};
 				height: 2px;
 				width: 100%;
 			}
@@ -87,7 +77,8 @@ export const Nav = styled.nav`
 		width: 35px;
 	}
 	.hamburger {
-		background-color: #fff;
+		background-color: ${(p) =>
+			p.theme.colors.text};
 		border-radius: 5px;
 		height: 4px;
 		width: 35px;
@@ -96,7 +87,8 @@ export const Nav = styled.nav`
 	}
 	.hamburger::before,
 	.hamburger::after {
-		background-color: #fff;
+		background-color: ${(p) =>
+			p.theme.colors.text};
 		border-radius: 6px;
 		content: "";
 		position: absolute;
@@ -110,11 +102,6 @@ export const Nav = styled.nav`
 	}
 	.hamburger::after {
 		transform: translateY(11px);
-	}
-	.menu-btn.open {
-		background-color: black;
-		border-radius: 8px;
-		padding: 0.8rem 0.5rem;
 	}
 	// Hamburger animation
 	.menu-btn.open .hamburger {

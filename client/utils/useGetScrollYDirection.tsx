@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 
-const SCROLLDIRECTIONS = {
+export const SCROLLDIRECTIONS = {
 	UP: "up",
 	DOWN: "down",
 	TOP: "top",
 }
 
-type SCROLLDIRECTIONS =
+export type SCROLLDIRECTIONS =
 	typeof SCROLLDIRECTIONS[keyof typeof SCROLLDIRECTIONS]
 
 const useGetScrollYDirection = (): string => {
