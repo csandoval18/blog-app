@@ -33,8 +33,7 @@ export const Nav = styled.nav`
 		text-align: center;
 		text-decoration: none;
 		&::after {
-			background-color: ${(p) =>
-				p.theme.colors.text};
+			background-color: ${(p) => p.theme.colors.text};
 			content: "";
 			display: block;
 			transition: width 0.25s ease-out;
@@ -45,8 +44,7 @@ export const Nav = styled.nav`
 			&::after {
 				content: "";
 				display: block;
-				background-color: ${(p) =>
-					p.theme.colors.text};
+				background-color: ${(p) => p.theme.colors.text};
 				height: 2px;
 				width: 100%;
 			}
@@ -77,8 +75,7 @@ export const Nav = styled.nav`
 		width: 35px;
 	}
 	.hamburger {
-		background-color: ${(p) =>
-			p.theme.colors.text};
+		background-color: ${(p) => p.theme.colors.text};
 		border-radius: 5px;
 		height: 4px;
 		width: 35px;
@@ -87,8 +84,7 @@ export const Nav = styled.nav`
 	}
 	.hamburger::before,
 	.hamburger::after {
-		background-color: ${(p) =>
-			p.theme.colors.text};
+		background-color: ${(p) => p.theme.colors.text};
 		border-radius: 6px;
 		content: "";
 		position: absolute;
@@ -111,16 +107,14 @@ export const Nav = styled.nav`
 		z-index: 2;
 	}
 	.menu-btn.open .hamburger::before {
-		transform: rotate(45deg)
-			translate(-35px, 35px);
+		transform: rotate(45deg) translate(-35px, 35px);
 	}
 	.menu-btn.open .hamburger::after {
-		transform: rotate(-45deg)
-			translate(-35px, -35px);
+		transform: rotate(-45deg) translate(-35px, -35px);
 	}
-	.nav-menu {
+	/* .nav-menu {
 		display: none;
-	}
+	} */
 	@media (min-width: 1728px) {
 		& {
 			padding: 10px 5rem;
@@ -140,16 +134,16 @@ export const Nav = styled.nav`
 		}
 	}
 `
-export const Sidebar = styled.div`
+export const NavMenu = styled.div`
 	&.show-sidebar {
 		left: 0;
 	}
-	background-color: rgba(0, 0, 0, 1);
+	/* background-color: rgba(0, 0, 0, 1);
 	position: fixed;
 	height: 100vh;
 	left: -100vw;
 	top: 0;
 	transition: left 0.5s ease-in-out;
 	width: 80vw;
-	z-index: 1;
+	z-index: 1; */
 `

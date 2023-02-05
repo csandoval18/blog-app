@@ -7,9 +7,4 @@ export const Hero = styled.section`
 	display: flex;
 	justify-content: center;
 	min-height: 100vh;
-	&::after {
-		border: 2px solid ${(p) => p.theme.colors.text};
-		content: "";
-		display: block;
-	}
 `

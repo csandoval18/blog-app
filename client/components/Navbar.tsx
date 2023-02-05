@@ -3,6 +3,7 @@ import Image from "next/image"
 import useGetScrollYDirection from "../utils/useGetScrollYDirection"
 import {
 	Nav,
+	NavMenu,
 	Sidebar,
 } from "../styles/components/Navbar.styled"
 import { NavButton } from "../styles/Global.styled"
@@ -12,25 +13,15 @@ interface NavbarProps {}
 const Navbar: React.FC<NavbarProps> = () => {
 	const [openSideBar, setOpenSideBar] =
 		useState<boolean>(false)
-	const [navClass, setNavClass] =
-		useState<string>("top")
+	const [navClass, setNavClass] = useState<string>("top")
 	const scrollYDir = useGetScrollYDirection()
 
 	useEffect(() => {
-		if (
-			scrollYDir === "up" &&
-			openSideBar !== true
-		)
+		if (scrollYDir === "up" && openSideBar !== true)
 			setNavClass("display-nav")
-		else if (
-			scrollYDir === "down" &&
-			openSideBar !== true
-		)
+		else if (scrollYDir === "down" && openSideBar !== true)
 			setNavClass("")
-		else if (
-			scrollYDir === "top" &&
-			openSideBar !== true
-		) {
+		else if (scrollYDir === "top" && openSideBar !== true) {
 			setNavClass("top")
 		} else {
 			setNavClass("top")
@@ -48,7 +39,11 @@ const Navbar: React.FC<NavbarProps> = () => {
 					priority
 				/>
 			</div>
-			<div className='nav-menu'>
+			<NavMenu
+				className={
+					openSideBar ? "nav-menu show-sidebar" : "nav-menu"
+				}
+			>
 				<ul>
 					<li>
 						<a href='#'>Acerca</a>
@@ -66,12 +61,10 @@ const Navbar: React.FC<NavbarProps> = () => {
 						<NavButton>Contactanos</NavButton>
 					</li>
 				</ul>
-			</div>
+			</NavMenu>
 			<div
 				className={
-					openSideBar
-						? "menu-btn open"
-						: "menu-btn"
+					openSideBar ? "menu-btn open" : "menu-btn"
 				}
 				onClick={() => {
 					setOpenSideBar(!openSideBar)
@@ -79,13 +72,11 @@ const Navbar: React.FC<NavbarProps> = () => {
 			>
 				<div className='hamburger'></div>
 			</div>
-			<Sidebar
+			{/* <Sidebar
 				className={
-					openSideBar
-						? "Sidebar show-sidebar"
-						: "Sidebar"
+					openSideBar ? "Sidebar show-sidebar" : "Sidebar"
 				}
-			/>
+			/> */}
 		</Nav>
 	)
 }
