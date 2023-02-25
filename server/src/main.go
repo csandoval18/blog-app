@@ -16,7 +16,12 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "Hello, world!")
 	})
-	r.Run() // listen and serve on 0.0.0.0:8080
+
+	err := http.ListenAndServe(":4000", r)
+	if err != nil {
+		panic(err)
+	}
+	// r.Run() // listen and serve on 0.0.0.0:8080
 }
 
 func canAccessPremium(user e.User) bool {

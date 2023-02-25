@@ -22,5 +22,5 @@ func ConnectDB() {
 		fmt.Println(err)
 		return
 	}
-	fmt.Println("Connected to the database!")
+	fmt.Println("Connected to the database")
 }
