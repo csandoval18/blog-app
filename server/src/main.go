@@ -14,7 +14,7 @@ func main() {
 	utils.ConnectDB()
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "Hello, world!")
+		c.String(http.StatusOK, "Server running.")
 	})
 
 	err := http.ListenAndServe(":4000", r)
