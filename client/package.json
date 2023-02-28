@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev && postcss ./src/styles/globals.css --dir ./src/styles/styles.css --watch",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postcss:watch": "post css src/style.css --dir public"
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/node": "18.14.2",
@@ -22,7 +21,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "css": "^3.0.0",
-    "post": "^0.0.1"
+    "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0"
   }
 }
