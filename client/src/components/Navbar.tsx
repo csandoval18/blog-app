@@ -7,17 +7,31 @@ interface NavbarProps {}
 const Navbar: React.FC<NavbarProps> = () => {
 	return (
 		<nav className={styles.navbar}>
-			<div className='logo'>
-				{" "}
-				<Image
-					className=''
-					src='/next.svg'
-					alt='Next.js Logo'
-					width={180}
-					height={37}
-					priority
-				/>
-			</div>
+			<Image
+				className={styles.logo}
+				src='/next.svg'
+				alt='Next.js Logo'
+				width={180}
+				height={37}
+				priority
+			/>
+			<ul className={styles.navMenu}>
+				<li>
+					<a href=''></a>
+				</li>
+				<li>
+					<a href=''></a>
+				</li>
+				<li>
+					<a href=''></a>
+				</li>
+				<li>
+					<a href=''></a>
+				</li>
+				<li>
+					<a href=''>Contact</a>
+				</li>
+			</ul>
 		</nav>
 	)
 }

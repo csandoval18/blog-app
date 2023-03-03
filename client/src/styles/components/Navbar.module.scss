@@ -1,5 +1,26 @@
+@import "../variables.scss";
+
 .navbar {
-	background-color: blue;
-	width: 100%;
+	align-items: center;
+	background-color: aliceblue;
+	display: flex;
 	height: 5rem;
+	padding: 0 3rem;
+	width: 100%;
+}
+.logo {
+	width: 120px;
+	transition: scale 0.4s ease-in-out;
+	scale: 1;
+	&:hover {
+		scale: 1.08;
+	}
+}
+.navMenu {
+	display: flex;
+	list-style: none;
+	a {
+		color: $foreground;
+		text-decoration: none;
+	}
 }
