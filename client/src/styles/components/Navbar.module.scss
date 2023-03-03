@@ -5,8 +5,8 @@
 	background-color: aliceblue;
 	display: flex;
 	height: 5rem;
-	padding: 0 3rem;
-	width: 100%;
+	justify-content: space-between;
+	padding: 0 5rem;
 }
 .logo {
 	width: 120px;
@@ -17,10 +17,81 @@
 	}
 }
 .navMenu {
-	display: flex;
+	background-color: aliceblue;
+	height: 100%;
+	left: 0;
 	list-style: none;
+	margin-top: 0;
+	padding: 3rem;
+	position: fixed;
+	top: 0;
 	a {
 		color: $foreground;
+		font-size: 16px;
 		text-decoration: none;
+		letter-spacing: 1px;
+	}
+}
+.hamburgerWrapper {
+	padding: 2rem 0;
+	position: relative;
+	width: 30px;
+}
+.open {
+	.hamburger::after {
+	}
+	.hamburger::before {
+		rotate: 90deg;
+	}
+	.hamburger {
+		opacity: 0;
+	}
+}
+.hamburger {
+	background-color: $foreground;
+	height: $hamburgerBarHeight;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 1;
+	width: 100%;
+	&::after {
+		background-color: $foreground;
+		content: "";
+		display: block;
+		height: $hamburgerBarHeight;
+		margin-top: -8px;
+		transition: opacity 0.3s ease-in-out;
+		width: 100%;
+		position: absolute;
+	}
+	&::before {
+		background-color: $foreground;
+		content: "";
+		display: block;
+		height: $hamburgerBarHeight;
+		transition: opacity 0.3s ease-in-out;
+		margin-top: 8px;
+		width: 100%;
+		position: absolute;
+	}
+}
+@media (min-width: 980px) {
+	.navMenu {
+		display: flex;
+		gap: 2rem;
+		a {
+			padding: 1rem 0;
+			&::after {
+				background-color: black;
+				content: "";
+				display: block;
+				height: 2px;
+				transition: width 0.3s ease-in-out;
+				width: 0;
+			}
+			&:hover::after {
+				height: 2px;
+				width: 100%;
+			}
+		}
 	}
 }
