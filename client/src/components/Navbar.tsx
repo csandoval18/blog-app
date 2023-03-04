@@ -27,13 +27,13 @@ const Navbar: React.FC<NavbarProps> = () => {
 				}
 			>
 				<li>
-					<a href='/services'>Services</a>
+					<a href='/services'>Posts</a>
 				</li>
 				<li>
-					<a href='/about'>About</a>
+					<a href='/about'>News</a>
 				</li>
 				<li>
-					<a href='/testimonials'>Testimonials</a>
+					<a href='/testimonials'>Sports</a>
 				</li>
 				<li>
 					<a href='/contact'>Contact</a>
