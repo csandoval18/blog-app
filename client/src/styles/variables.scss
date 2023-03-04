@@ -1,8 +1,8 @@
-$foreground: rgb(20, 20, 20);
-$background: aliceblue;
+$foreground: rgb(26, 26, 26);
+$background: rgb(20, 20, 20);
 $main: rgb(193, 214, 233);
 $secondary: rgb(51, 255, 143);
-$black: rgb(20, 20, 20);
+$black: rgb(8, 8, 8);
 $white: rgb(255, 255, 255);
 $hamburgerBarHeight: 3px;
 
@@ -15,3 +15,7 @@ $laptopM: 1440px;
 $desktop: 1920px;
 $desktopM: 2560px;
 $desktopL: 3840px;
+
+@media (prefers-color-scheme: dark) {
+	$background: rgb(20, 20, 20);
+}

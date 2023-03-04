@@ -5,9 +5,8 @@
 	font-weight: 400;
 }
 @media (prefers-color-scheme: dark) {
-	$background: rgb(20, 20, 20);
 	body {
-		background-color: $background;
+		background-color: $black;
 	}
 }
 body {
