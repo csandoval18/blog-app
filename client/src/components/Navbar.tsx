@@ -27,16 +27,25 @@ const Navbar: React.FC<NavbarProps> = () => {
 				}
 			>
 				<li>
-					<a href='/services'>Posts</a>
+					<a href='/services'>Politics</a>
 				</li>
 				<li>
-					<a href='/about'>News</a>
+					<a href='/economy'>Economy</a>
 				</li>
 				<li>
-					<a href='/testimonials'>Sports</a>
+					<a href='/world'>Society</a>
 				</li>
 				<li>
-					<a href='/contact'>Contact</a>
+					<a href='/world'>World</a>
+				</li>
+				<li>
+					<a href='/sports'>Sports</a>
+				</li>
+				<li>
+					<a href='/sports'>About</a>
+				</li>
+				<li>
+					<a href='/contact'>Contact Us</a>
 				</li>
 			</ul>
 			<div
