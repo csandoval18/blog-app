@@ -2,7 +2,7 @@
 
 .navbar {
 	align-items: center;
-	background-color: aliceblue;
+	background-color: $main;
 	display: flex;
 	height: 5rem;
 	justify-content: space-between;
@@ -17,7 +17,7 @@
 	}
 }
 .navMenu {
-	background-color: aliceblue;
+	background-color: $black;
 	height: 100%;
 	left: -100%;
 	list-style: none;
@@ -27,16 +27,16 @@
 	transition: left 0.3s ease-in-out;
 	top: 0;
 	a {
-		background-color: $main;
-		color: $foreground;
+		color: $white;
 		display: block;
 		font-size: 16px;
-		padding: 2rem 4rem;
+		padding: 2.5rem 10rem;
 		text-decoration: none;
 		text-align: center;
 		letter-spacing: 1px;
 		&:hover {
-			background-color: $secondary;
+			background-color: $main;
+			color: $black;
 		}
 	}
 	&.open {
@@ -95,7 +95,7 @@
 	opacity: 1;
 	width: 100%;
 }
-@media (min-width: 980px) {
+@media (min-width: $laptop) {
 	.navMenu {
 		align-items: center;
 		background: none;
@@ -104,9 +104,11 @@
 		gap: 2rem;
 		position: static;
 		a {
+			background-color: transparent;
+			color: $foreground;
 			padding: 1rem 0;
 			&::after {
-				background-color: black;
+				background-color: $foreground;
 				content: "";
 				display: block;
 				height: 2px;
@@ -116,6 +118,9 @@
 			&:hover::after {
 				height: 2px;
 				width: 100%;
+			}
+			&:hover {
+				background-color: transparent;
 			}
 		}
 	}
