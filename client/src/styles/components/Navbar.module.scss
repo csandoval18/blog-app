@@ -35,31 +35,15 @@
 .hamburgerWrapper {
 	padding: 2rem 0;
 	position: relative;
-	width: 30px;
-}
-.open {
-	.hamburger::after {
-	}
-	.hamburger::before {
-		rotate: 90deg;
-	}
-	.hamburger {
-		opacity: 0;
-	}
-}
-.hamburger {
-	background-color: $foreground;
-	height: $hamburgerBarHeight;
-	transition: opacity 0.3s ease-in-out;
-	opacity: 1;
-	width: 100%;
+	width: 33px;
 	&::after {
 		background-color: $foreground;
 		content: "";
 		display: block;
 		height: $hamburgerBarHeight;
-		margin-top: -8px;
-		transition: opacity 0.3s ease-in-out;
+		margin-top: 5px;
+		transition: opacity 0.4s ease-in-out,
+			rotate 0.4s ease-in-out, margin-top 0.25s ease-in-out;
 		width: 100%;
 		position: absolute;
 	}
@@ -68,11 +52,37 @@
 		content: "";
 		display: block;
 		height: $hamburgerBarHeight;
-		transition: opacity 0.3s ease-in-out;
-		margin-top: 8px;
+		transition: opacity 0.4s ease-in-out,
+			rotate 0.4s ease-in, margin-top 0.25s ease-in-out;
+		margin-top: calc(-5px - $hamburgerBarHeight);
 		width: 100%;
 		position: absolute;
 	}
+}
+.open {
+	.hamburger {
+		margin-top: 0px;
+		opacity: 0;
+		transform: translateX(32px);
+		visibility: hidden;
+	}
+	&::before {
+		rotate: 45deg;
+		margin-top: 0px;
+	}
+	&::after {
+		rotate: -45deg;
+		margin-top: -3px;
+	}
+}
+.hamburger {
+	background-color: $foreground;
+	display: block;
+	height: $hamburgerBarHeight;
+	transition: opacity 0.4s ease-in, visibility 0.4s ease-in,
+		transform 0.3s ease-in;
+	opacity: 1;
+	width: 100%;
 }
 @media (min-width: 980px) {
 	.navMenu {
