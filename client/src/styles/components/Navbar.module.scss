@@ -62,12 +62,12 @@
 	&.open {
 		.hamburger {
 			background-color: transparent;
-			transform: translateX(50px);
+			// transform: translateX(0px);
 			&::before {
-				transform: rotate(45deg) translate(-35px, 35px);
+				transform: rotate(45deg);
 			}
 			&::after {
-				transform: rotate(-45deg) translate(-35px, -35px);
+				transform: rotate(-45deg);
 			}
 		}
 	}
@@ -75,9 +75,8 @@
 .hamburger {
 	background-color: $foreground;
 	height: $hamburgerBarHeight;
-	transition: background-color 0.3s ease-in-out transform
-		0.3s ease-in;
-	opacity: 1;
+	transition: background-color 0.3s ease-in-out,
+		transform 0.3s ease-in;
 	width: 100%;
 	&::before {
 		background-color: $foreground;
@@ -85,7 +84,7 @@
 		display: block;
 		height: $hamburgerBarHeight;
 		transition: transform 0.3s ease-in-out;
-		transform: translateY(-5px);
+		transform: translateY(-8px);
 		width: 100%;
 		position: absolute;
 	}
@@ -94,7 +93,7 @@
 		content: "";
 		display: block;
 		height: $hamburgerBarHeight;
-		transform: translateY(5px);
+		transform: translateY(8px);
 		transition: transform 0.3s ease-in-out;
 		width: 100%;
 		position: absolute;
