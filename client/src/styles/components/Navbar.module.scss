@@ -100,6 +100,10 @@
 	}
 }
 @media (min-width: $laptop) {
+	.navMenuWrapper {
+		position: static;
+		width: fit-content;
+	}
 	.navMenu {
 		align-items: center;
 		background: none;
