@@ -1,9 +1,9 @@
 import React from "react"
 
-interface worldProps {}
+interface WorldProps {}
 
-const world: React.FC<worldProps> = () => {
+const World: React.FC<WorldProps> = () => {
 	return <div></div>
 }
 
-export default world
+export default World

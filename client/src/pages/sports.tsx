@@ -1,9 +1,9 @@
 import React from "react"
 
-interface sportsProps {}
+interface SportsProps {}
 
-const sports: React.FC<sportsProps> = () => {
+const Sports: React.FC<SportsProps> = () => {
 	return <div></div>
 }
 
-export default sports
+export default Sports

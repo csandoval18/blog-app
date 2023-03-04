@@ -19,35 +19,46 @@ const Navbar: React.FC<NavbarProps> = () => {
 					priority
 				/>
 			</Link>
-			<ul
+			<div
+				onClick={() => {
+					setOpenMenu(!openMenu)
+				}}
 				className={
 					openMenu
-						? styles.navMenu + " " + styles.open
-						: styles.navMenu
+						? styles.navMenuWrapper + " " + styles.open
+						: styles.navMenuWrapper
 				}
 			>
-				<li>
-					<a href='/services'>Politics</a>
-				</li>
-				<li>
-					<a href='/economy'>Economy</a>
-				</li>
-				<li>
-					<a href='/world'>Society</a>
-				</li>
-				<li>
-					<a href='/world'>World</a>
-				</li>
-				<li>
-					<a href='/sports'>Sports</a>
-				</li>
-				<li>
-					<a href='/sports'>About</a>
-				</li>
-				<li>
-					<a href='/contact'>Contact Us</a>
-				</li>
-			</ul>
+				<ul
+					className={
+						openMenu
+							? styles.navMenu + " " + styles.open
+							: styles.navMenu
+					}
+				>
+					<li>
+						<a href='/politics'>Politics</a>
+					</li>
+					<li>
+						<a href='/economy'>Economy</a>
+					</li>
+					<li>
+						<a href='/society'>Society</a>
+					</li>
+					<li>
+						<a href='/world'>World</a>
+					</li>
+					<li>
+						<a href='/sports'>Sports</a>
+					</li>
+					<li>
+						<a href='/about'>About</a>
+					</li>
+					<li>
+						<a href='/contact'>Contact Us</a>
+					</li>
+				</ul>
+			</div>
 			<div
 				className={
 					openMenu

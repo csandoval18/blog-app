@@ -1,9 +1,9 @@
 import React from "react"
 
-interface economyProps {}
+interface EconomyProps {}
 
-const economy: React.FC<economyProps> = () => {
+const Economy: React.FC<EconomyProps> = () => {
 	return <div></div>
 }
 
-export default economy
+export default Economy

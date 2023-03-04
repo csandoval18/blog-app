@@ -1,9 +1,9 @@
 import React from "react"
 
-interface politicsProps {}
+interface PoliticsProps {}
 
-const politics: React.FC<politicsProps> = () => {
+const Politics: React.FC<PoliticsProps> = () => {
 	return <div></div>
 }
 
-export default politics
+export default Politics

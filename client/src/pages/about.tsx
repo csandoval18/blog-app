@@ -1,9 +1,9 @@
 import React from "react"
 
-interface aboutProps {}
+interface AboutProps {}
 
-const about: React.FC<aboutProps> = () => {
+const About: React.FC<AboutProps> = () => {
 	return <div></div>
 }
 
-export default about
+export default About
