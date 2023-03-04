@@ -29,13 +29,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 						: styles.navMenuWrapper
 				}
 			>
-				<ul
-					className={
-						openMenu
-							? styles.navMenu + " " + styles.open
-							: styles.navMenu
-					}
-				>
+				<ul className={styles.navMenu}>
 					<li>
 						<a href='/politics'>Politics</a>
 					</li>

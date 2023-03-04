@@ -26,6 +26,9 @@
 	&.open {
 		display: block;
 		left: 0;
+		.navMenu {
+			left: 0;
+		}
 	}
 }
 .navMenu {
@@ -50,9 +53,6 @@
 			background-color: $main;
 			color: $black;
 		}
-	}
-	&.open {
-		left: 0;
 	}
 }
 .hamburgerWrapper {
