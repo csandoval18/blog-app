@@ -1,9 +1,14 @@
+@import "./variables.scss";
 :root {
-	color-scheme: light;
+	color-scheme: light dark;
 	font-family: "Poppins", sans-serif;
 	font-weight: 400;
 }
 @media (prefers-color-scheme: dark) {
+	$background: rgb(20, 20, 20);
+	body {
+		background-color: $background;
+	}
 }
 body {
 	margin: 0;
