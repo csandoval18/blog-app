@@ -19,7 +19,13 @@ const Navbar: React.FC<NavbarProps> = () => {
 					priority
 				/>
 			</Link>
-			<ul className={styles.navMenu}>
+			<ul
+				className={
+					openMenu
+						? styles.navMenu + " " + styles.open
+						: styles.navMenu
+				}
+			>
 				<li>
 					<a href='/services'>Services</a>
 				</li>

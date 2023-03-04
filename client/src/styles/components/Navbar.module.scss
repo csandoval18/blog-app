@@ -19,11 +19,12 @@
 .navMenu {
 	background-color: aliceblue;
 	height: 100%;
-	left: 0;
+	left: -100%;
 	list-style: none;
 	margin: 0;
 	padding: 3rem;
 	position: fixed;
+	transition: left 0.5s ease-in-out;
 	top: 0;
 	a {
 		color: $foreground;
@@ -31,11 +32,30 @@
 		text-decoration: none;
 		letter-spacing: 1px;
 	}
+	&.open {
+		left: 0;
+	}
 }
 .hamburgerWrapper {
 	padding: 2rem 0;
 	position: relative;
 	width: 33px;
+	&.open {
+		.hamburger {
+			margin-top: 0px;
+			opacity: 0;
+			transform: translateX(32px);
+			visibility: hidden;
+		}
+		&::before {
+			rotate: 45deg;
+			margin-top: 0px;
+		}
+		&::after {
+			rotate: -45deg;
+			margin-top: -3px;
+		}
+	}
 	&::after {
 		background-color: $foreground;
 		content: "";
@@ -53,26 +73,10 @@
 		display: block;
 		height: $hamburgerBarHeight;
 		transition: opacity 0.4s ease-in-out,
-			rotate 0.4s ease-in, margin-top 0.3s ease-in-out;
+			rotate 0.3s ease-in, margin-top 0.3s ease-in-out;
 		margin-top: calc(-5px - $hamburgerBarHeight);
 		width: 100%;
 		position: absolute;
-	}
-}
-.open {
-	.hamburger {
-		margin-top: 0px;
-		opacity: 0;
-		transform: translateX(32px);
-		visibility: hidden;
-	}
-	&::before {
-		rotate: 45deg;
-		margin-top: 0px;
-	}
-	&::after {
-		rotate: -45deg;
-		margin-top: -3px;
 	}
 }
 .hamburger {
