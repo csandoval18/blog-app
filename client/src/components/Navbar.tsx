@@ -56,8 +56,8 @@ const Navbar: React.FC<NavbarProps> = () => {
 			<div
 				className={
 					openMenu
-						? styles.hamburgerWrapper + " " + styles.open
-						: styles.hamburgerWrapper
+						? styles.hamburgerBtn + " " + styles.open
+						: styles.hamburgerBtn
 				}
 				onClick={() => {
 					setOpenMenu(!openMenu)
