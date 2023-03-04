@@ -21,7 +21,7 @@
 	height: 100%;
 	left: 0;
 	list-style: none;
-	margin-top: 0;
+	margin: 0;
 	padding: 3rem;
 	position: fixed;
 	top: 0;
@@ -86,8 +86,12 @@
 }
 @media (min-width: 980px) {
 	.navMenu {
+		align-items: center;
+		background: none;
 		display: flex;
+		padding: 0;
 		gap: 2rem;
+		position: static;
 		a {
 			padding: 1rem 0;
 			&::after {
@@ -103,5 +107,8 @@
 				width: 100%;
 			}
 		}
+	}
+	.hamburgerWrapper {
+		display: none;
 	}
 }
