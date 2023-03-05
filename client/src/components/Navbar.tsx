@@ -31,25 +31,25 @@ const Navbar: React.FC<NavbarProps> = () => {
 			>
 				<ul className={styles.navMenu}>
 					<li>
-						<a href='/politics'>Politics</a>
+						<Link href='/politics'>Politics</Link>
 					</li>
 					<li>
-						<a href='/economy'>Economy</a>
+						<Link href='/economy'>Economy</Link>
 					</li>
 					<li>
-						<a href='/society'>Society</a>
+						<Link href='/society'>Society</Link>
 					</li>
 					<li>
-						<a href='/world'>World</a>
+						<Link href='/world'>World</Link>
 					</li>
 					<li>
-						<a href='/sports'>Sports</a>
+						<Link href='/sports'>Sports</Link>
 					</li>
 					<li>
-						<a href='/about'>About</a>
+						<Link href='/about'>About</Link>
 					</li>
 					<li>
-						<a href='/contact'>Contact Us</a>
+						<Link href='/contact'>Contact Us</Link>
 					</li>
 				</ul>
 			</div>
