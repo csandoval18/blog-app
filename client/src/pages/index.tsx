@@ -1,6 +1,5 @@
-import { Inter } from "next/font/google"
-import HomeContent from "@/components/HomeContent"
+import HomePage from "@/components/Home"
 
 export default function Home() {
-	return <HomeContent />
+	return <HomePage />
 }
