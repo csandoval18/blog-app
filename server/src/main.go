@@ -16,7 +16,6 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "Server running.")
 	})
-
 	err := http.ListenAndServe(":4000", r)
 	if err != nil {
 		panic(err)
