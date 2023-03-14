@@ -16,6 +16,9 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "Server running.")
 	})
+	r.GET("/hello", func(c *gin.Context) {
+		c.String(http.StatusOK, "Hello world!")
+	})
 	err := http.ListenAndServe(":4000", r)
 	if err != nil {
 		panic(err)
@@ -24,10 +27,7 @@ func main() {
 }
 
 func canAccessPremium(user e.User) bool {
-	if user.Subscription.Role == "paid" {
-		return true
-	}
-	return false
+	return user.Subscription.Role == "paid" // returns true or false
 }
 
 func getArticle(db *gorm.DB, id uint, user e.User) (e.Article, error) {
