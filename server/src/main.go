@@ -5,6 +5,9 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"os/exec"
+	"os/signal"
+	"syscall"
 
 	"github.com/csandoval18/blog-app/tree/main/server/src/utils"
 	"github.com/gin-gonic/gin"
@@ -12,6 +15,15 @@ import (
 )
 
 func main() {
+	go func() {
+		cmd := exec.Command("gin", "--appPort", "3000", "--port", "4000", "run", "main.go")
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+		err := cmd.Run()
+		if err != nil {
+			log.Fatal(err)
+		}
+	}()
 	utils.ConnectDB()
 	// Get the PORT number from the environment variable, or use 8080 as a default
 	err := godotenv.Load()
@@ -34,4 +46,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	// Wait for a signal to stop the server
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
+	<-c
 }
