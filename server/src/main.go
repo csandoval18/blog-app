@@ -15,15 +15,15 @@ import (
 )
 
 func main() {
-	go func() {
-		cmd := exec.Command("gin", "--appPort", "3000", "--port", "4000", "run", "main.go")
-		cmd.Stdout = os.Stdout
-		cmd.Stderr = os.Stderr
-		err := cmd.Run()
-		if err != nil {
-			log.Fatal(err)
-		}
-	}()
+	// go func() {
+	// 	cmd := exec.Command("gin", "--appPort", "3000", "--port", "4000", "run", "main.go")
+	// 	cmd.Stdout = os.Stdout
+	// 	cmd.Stderr = os.Stderr
+	// 	err := cmd.Run()
+	// 	if err != nil {
+	// 		log.Fatal(err)
+	// 	}
+	// }()
 	utils.ConnectDB()
 	// Get the PORT number from the environment variable, or use 8080 as a default
 	err := godotenv.Load()
